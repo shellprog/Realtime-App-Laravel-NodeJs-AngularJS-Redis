@@ -1,23 +1,8 @@
-## Laravel Admin Panel ***** Work In Progress *****
+## Realtime App Using Laravel + NodeJs + AngularJS + Redis
 
-Is there a need for something like this ? Yes it is .
+This is insane how we can combine Laravel,NodeJS,AngularJS and Redis to create an amazing product . For this tutorial i hope you know basics of angularjs , laravel and dont worry about redis , nodejs i will cover that in detail . Below are our steps for User Management Panel .
+1.Laravel Installation and Configuration
+2.Install Redis Server and NodeJS
+3.Setting up AngularJS
 
-Why ?
-
-## CRUD Management 
-CRUD is repetitive task . Laravel Admin Panel makes CRUD a breeze with just 2 clicks .
-
-## CRUD Management with Relationships - WIP
-Simple CRUD is good for tables which are not linked to others or which are not related to other tables 
-If i want to create a user table which has relationship with user_groups then this can be useful
-
-## User Management - WIP
-It will wrap all popular authentication systems like sentry , confide , buildin auth into adapter through which user management can be configured like user creations , user groups , groups , throttle etc .
-
-## Cron Jobs- WIP
-This really needs an interface 
-
-Stay tuned !
-
-
-The Laravel Admin Panel is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+[Click here](http://kodeinfo.com/) to check complete tutorial at kodeinfo.
