@@ -1,0 +1,224 @@
+<style>
+    input[type="file"] {
+        width: 6.3em \0/IE9;
+        height: 1.5em;
+        margin: 5px;
+    }
+
+    input[multiple] {
+        width: 6.2em \0/IE9;
+    }
+
+    .sel-file {
+        padding: 1px 5px;
+        font-size: smaller;
+        color: grey;
+    }
+
+    .response {
+        padding-top: 30px;
+    }
+
+    .response>ul {
+        list-style-type: decimal;
+    }
+
+    .response li {
+        color: blue;
+        font-size: smaller;
+        padding-bottom: 5px;
+    }
+
+    .progress {
+        display: inline-block;
+        width: 100px;
+        border: 3px groove #CCC;
+    }
+
+    .progress div {
+        font-size: smaller;
+        background: orange;
+        width: 0;
+    }
+
+    .drop-box {
+        background: #F8F8F8;
+        border: 5px dashed #DDD;
+        width: 200px;
+        height: 65px;
+        text-align: center;
+        padding-top: 35px;
+    }
+
+    .drop-box.dragover {
+        border: 5px dashed blue;
+    }
+
+    /* for IE*/
+    .js-fileapi-wrapper {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    button {
+        padding: 1px 5px;
+        font-size: smaller;
+        margin: 0 3px;
+    }
+
+    .ng-v {
+        float: right;
+    }
+
+    .sel-file img {
+        float: left;
+        width: 18px;
+        height: 18px;
+        padding-right: 10px;
+    }
+
+    .sub {
+        font-size: smaller;
+        color: #777;
+        padding-top: 5px;
+        padding-left: 10px;
+    }
+</style>
+<div class="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="clip-home-3"></i>
+                        Dashboard
+                    </li>
+                </ol>
+                <div class="page-header">
+                    <h1>ILB Dashboard</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="core-box">
+                    <div class="heading">
+                        <i class="clip-database circle-icon circle-dark-blue"></i>
+                        <h2>Manage Orders</h2>
+                    </div>
+                    <div class="content">
+                        View and manage orders made by ILB customers. You can see details of orders and received orders and you can edit order details if necessary, including billing shipping and payment information.
+                    </div>
+                    <div class="btn-group btn-group-justified">
+                        <a class="btn btn-primary" href="#!/orders/quote">
+                            New Quotes <i class="clip-arrow-right-2"></i>
+                        </a>
+                        <a class="btn btn-primary" href="#!/update-tool">
+                            Update Tool <i class="clip-arrow-right-2"></i>
+                        </a>
+                    </div>
+                    <br/>
+                    <div class="btn-group btn-group-justified">
+                        <a class="btn btn-success" href="#!/orders">
+                            Orders <i class="clip-arrow-right-2"></i>
+                        </a>
+                        <a class="btn btn-success" href="#!/orders/received">
+                             Received <i class="clip-arrow-right-2"></i>
+                        </a>
+                        <a class="btn btn-success" href="#!/orders/search">
+                            Search <i class="clip-arrow-right-2"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="core-box">
+                    <div class="heading">
+                        <i class="clip-folder circle-icon circle-dark-blue"></i>
+                        <h2>Content Management</h2>
+                    </div>
+                    <div class="content">
+                        Easily add content to the ILB website. This includes adding a news article or podcast which will automatically post the content to the home page also.
+                    </div>
+                    <div class="btn-group btn-group-justified">
+                        <a class="btn btn-primary" href="#!/content">
+                            Create new content <i class="clip-arrow-right-2"></i>
+                        </a>
+                    </div>
+                    <br/>
+                    <div class="btn-group btn-group-justified">
+                        <a class="btn btn-success" href="#!/content/content">
+                           All Content <i class="clip-arrow-right-2"></i>
+                        </a>
+                        <a class="btn btn-success" href="#!/content/categories">
+                            Categories <i class="clip-arrow-right-2"></i>
+                        </a>
+
+                    </div>
+                    <br/>
+                    <div class="btn-group btn-group-justified">
+                        <a class="btn btn-default" href="#!/testimonials">
+                            Testimonials <i class="clip-arrow-right-2"></i>
+                        </a>
+                        <a class="btn btn-default" href="#!/winners">
+                            Winners <i class="clip-arrow-right-2"></i>
+                        </a>
+                        <a class="btn btn-default" href="#!/authors">
+                            Authors <i class="clip-arrow-right-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="core-box">
+                    <div class="heading">
+                        <i class="clip-cart circle-icon circle-dark-blue"></i>
+                        <h2>Manage Products</h2>
+                    </div>
+                    <div class="content">
+                        Manage products, promotions, ads, and reviews on the ILB website. You can sync products and premiums, sync shipping prices with SalesForce, and also manage product categories.
+                    </div>
+                    <div class="btn-group btn-group-justified">
+                        <a class="btn btn-primary" href="#!/products/add">
+                            Create new products <i class="clip-arrow-right-2"></i>
+                        </a>
+                    </div>
+                    <br/>
+                    <div class="btn-group btn-group-justified">
+
+                        <a class="btn btn-success" href="#!/products">
+                            All Products <i class="clip-arrow-right-2"></i>
+                        </a>
+                        <a class="btn btn-success" href="#!/products/related">
+                            Related Products <i class="clip-arrow-right-2"></i>
+                        </a>
+                    </div>
+                    <br/>
+                    <div class="btn-group btn-group-justified">
+                        <a class="btn btn-default" href="#!/products/categories">
+                            Main Categories <i class="clip-arrow-right-2"></i>
+                        </a>
+                        <a class="btn btn-default" href="#!/products/subcategory">
+                            Sub Categories <i class="clip-arrow-right-2"></i>
+                        </a>
+                    </div>
+                    <br/>
+                    <div class="btn-group btn-group-justified">
+                        <a class="btn btn-default" href="#!/promotions">
+                            Promotions <i class="clip-arrow-right-2"></i>
+                        </a>
+                        <a class="btn btn-default" href="#!/promotions-home">
+                            Ads <i class="clip-arrow-right-2"></i>
+                        </a>
+                        <a class="btn btn-default" href="#!/reviews">
+                            Reviews <i class="clip-arrow-right-2"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
