@@ -13,7 +13,7 @@ class UserUpdatedEventHandler {
     public function handle($data)
     {
         $redis = Redis::connection();
-        $redis->publish(self::CHANNEL, Response::json($data));
+        $redis->publish(self::CHANNEL, $data);
 
     }
 
